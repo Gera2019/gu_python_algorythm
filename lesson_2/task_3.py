@@ -11,11 +11,11 @@ def reverse_num(n):
 # version 2
 # recursion
 def reverse_num2(n):
-	if len(str(n)) == 1:
-		print(n)
-		return n
-	print(int(n), int(n) % (10**(len(str(n)) - 1)))
-	return int(n) % reverse_num2(int(n) % (10**(len(str(n)) - 1)))
+	n = int(n)
+	if int(n) == 0:
+		return ''
+	# print(int(n), int(n) % (10**(len(str(n)) - 1)))
+	return f'{n % 10}' + f'{reverse_num2(n // 10)}'
 
 def main():
 	n = input('Введите число ')
@@ -23,4 +23,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+	main()
