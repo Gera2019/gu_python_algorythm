@@ -25,15 +25,6 @@ def substring_count(str):
     return len(h) - 1
 
 
-
-
-
-
-
-
-
-
-
 def main():
     text = 'elleelle'
     print(substring_count(text))
